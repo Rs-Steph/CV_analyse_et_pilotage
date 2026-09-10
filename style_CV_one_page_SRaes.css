@@ -1,0 +1,802 @@
+/* Réinitialisation de base */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: auto;
+}
+
+/* Style général du body */
+body {
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* ANCRAGE */
+
+section {
+    scroll-margin-top: 90px;
+}
+
+/* FIN de préparation de la strucutre de la page */
+
+
+/* ----- En tête de page ----- */
+
+/* Barre de navigation */
+.navbar{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    z-index: 1000;
+}
+    
+/* Liste des liens */
+.nav-links{
+    display: flex;
+    list-style: none;
+    gap: 70px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Liens */
+.nav-links a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.5s ease;
+}
+
+/* Effet au survol */
+.nav-links a:hover{
+    color: #bfd2db;
+}
+
+/* Hover */
+.footer-column a:hover{
+    color: #bfd2db;
+}
+
+/* ----- Fin de l'en-tête de page ----- */
+
+
+/* ----- Début de la SECTION A PROPOSE DE MOI ----- */
+
+.profil {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0;
+    padding: 90px 60px 48px;
+}
+
+    /* ----- Titre CV ----- */
+
+.titre_CV {
+    margin-bottom: 30px;
+}
+
+.titre_CV h1 {
+    height: auto;
+    display: inline;
+    color:black;
+    font-weight: 700;
+    font-size: 3.5rem;
+    letter-spacing: 0.08em;
+    line-height: 1.1;
+
+}
+
+.role_cv {
+    margin: 8px 0 0;
+    font-weight: 500;
+    color: black;
+    margin-top: 10px;
+    font-size: 1.1rem;
+    letter-spacing: 0.08em;
+}
+
+.descriptif_role{
+    margin: 4px 0 0;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 0.1px;
+    color: #666;
+}
+
+.descriptif_role span{
+    margin: 0 4px;
+}
+    /* ----- Fin Titre CV ----- */
+
+    /* ----- Création des  Deux colonnes ----- */
+
+.apropos-grid {
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+}
+    /* ----- Fin de création des deux colonnes ----- */
+
+    /* ----- Colonne Gauche : présentation ----- */
+
+.positionnement {
+    border-left: 4px solid #222;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1.5rem 4.5rem 1.5rem 2rem;
+}
+
+.description {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.objectif {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.signature {
+    font-weight: 600;
+    line-height: 1.6;
+    max-width: 680px;
+    margin: 0;
+    background-color: #DCDCDC;
+    padding: 25px 30px;
+    font-size: 1.0625rem;
+}
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 350px;
+}
+
+.logo img {
+    display: block;
+    width: 100%;
+    max-width: 390px;
+    height: auto;
+    object-fit: contain;
+    opacity: 1;
+}
+
+
+
+/* ----- Fin De la SECTION A PROPOS DE MOI ---- */
+
+/* ----- Début de la SECTION COMPETENCES ----- */
+
+.competences {
+    padding: 64px 10%;
+}
+
+.competences h2 {
+    font-size: 2rem;
+    margin-bottom: 28px;
+}
+
+.competences-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.competence-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.competence-card:hover {
+    transform: translateY(-5px);
+}
+
+.competence-card h3 {
+    margin-bottom: 10px;
+    color: #1f2937;
+}
+
+.competence-card ul {
+    margin: 0;
+    padding-left: 1.2rem;
+    list-style: none;
+}
+
+.competence-card li {
+    color: #4b5563;
+    line-height: 1.5;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+/* ----- Fin de la SECTION COMPETENCES ----- */
+
+/* ----- Début de la SECTION EXPERIENCES ----- */
+
+.experiences {
+    padding: 72px 10%;
+}
+
+.experiences h2 {
+    font-size: 2rem;
+    margin-bottom: 28px;
+}
+
+.experience-card {
+    background: #ffffff;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.experience-card h3 {
+    margin-bottom: 5px;
+    color: #1f2937;
+}
+
+.experience-card h4 {
+    margin-bottom: 15px;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.experience-card ul {
+    padding-left: 20px;
+}
+
+.experience-card li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+/* ----- Fin de la SECTION EXPERIENCES ----- */
+
+/* -----Début de la  SECTION FORMATION ----- */
+
+.formation{
+    margin-top: 0;
+    background-color: #111;
+    color: aliceblue;
+    padding: 72px 40px;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Titre principal */
+
+.formation h1{
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 44px;
+    font-weight: 600;
+}
+
+/* Conteneur */
+
+.formation-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+/* Cartes */
+
+.formation-card{
+    background-color: #1b1b1b;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #2c2c2c;
+    transition: 0.3s ease;
+}
+
+/* Effet hover */
+
+.formation-card:hover{
+    transform: translateY(-5px);
+    border-color: #555;
+}
+
+/* Dates */
+
+.date{
+    color: #9e9e9e;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* Titre formation */
+
+.formation-card h2{
+    font-size: 22px;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.formation-card p{
+    color: #d0d0d0;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+/* ---- Fin de la SECTION FORMATION ----- */
+
+/* ----- Début Section Langues ----- */
+
+/* ----- Début Section Langues ----- */
+
+.langues {
+    padding: 64px 10% 48px;
+    margin-top: 0;
+}
+
+.langues h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.langues-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 2rem;
+    max-width: 700px;
+}
+
+.langue {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1.25rem;
+    border-left: 3px solid #222;
+    background: #f5f5f5;
+}
+
+.langue-nom {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #222;
+}
+
+.langue-niveau {
+    margin-top: 0.3rem;
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.langues-apprentissage {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    font-style: italic;
+    color: #666;
+}
+
+/* ----- Fin Section Langues ----- */
+
+/* ----- Début Section Centres d'interets ----- */
+.centres-interet {
+    padding: 48px 10% 64px;
+    margin-top: 0;
+} 
+
+.centres-interet h2 { 
+    font-size: 2rem; 
+    margin-bottom: 1rem; 
+}
+
+.interets-introduction { 
+    max-width: 850px; 
+    margin: 0 0 2rem; 
+    font-size: 1rem; 
+    line-height: 1.7; 
+    color: #666; 
+} 
+
+.interets-introduction strong { 
+    color: #222; 
+    font-weight: 600;
+} 
+
+.interets-list { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 1.5rem; 
+    max-width: 900px; 
+} 
+
+.interet { 
+    display: grid; 
+    grid-template-columns: 220px 1fr; 
+    column-gap: 2.5rem; align-items: baseline; 
+} 
+
+.interet h3 { 
+    margin: 0; 
+    font-size: 1rem; 
+    font-weight: 600; 
+    color: #222; 
+} 
+
+.interet p { 
+    margin: 0; 
+    font-size: 0.875rem; 
+    line-height: 1.5; 
+    color: #666; 
+}
+/* ----- Fin Section Centres d'interêts ----- */
+
+
+/* ----- Début de la SECTION DEMAIN ----- */
+
+.demain {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 88px 60px;
+}
+
+
+/* ----- Titre ----- */
+
+.demain_titre {
+    text-align: center;
+    margin-bottom: 56px;
+}
+
+.demain_titre h2 {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    line-height: 1.1;
+}
+
+.demain_intro {
+    margin: 18px 0 0;
+    font-size: 1.15rem;
+    font-style: italic;
+    letter-spacing: 0.04em;
+}
+
+
+/* ----- Coordonnées ----- */
+
+.demain_colonne {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+}
+
+
+/* ----- Une coordonnée ----- */
+
+.demain_objet {
+    min-height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 25px;
+    text-align: center;
+}
+
+
+/* ----- Séparateurs verticaux ----- */
+
+.demain_objet + .demain_objet {
+    border-left: 1px solid #222;
+}
+
+
+/* ----- Libellés ----- */
+
+.demain_label {
+    margin-bottom: 14px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+}
+
+
+/* ----- Informations ----- */
+
+.demain_objet a,
+.demain_information {
+    font-size: 1rem;
+    color: #222;
+    text-decoration: none;
+}
+
+.demain_objet a:hover {
+    text-decoration: underline;
+}
+/* ----- Fin de la SECTION DEMAIN ----- */
+
+
+/* ----- Début du FOOTER ----- */
+
+.footer{
+    background-color: black;
+    color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px 40px;
+    font-family: 'Inter', sans-serif;
+    border-top: 1px solid #222;
+}
+
+/* Partie logo */
+.footer-logo h2{
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.footer-logo p{
+    color: aliceblue;
+    font-size: 15px;
+}
+
+/* ----- Fin du FOOTER ----- */
+
+/* ----- Transparence au survol ----- */
+.competence-card,
+.experience-card,
+.formation-card,
+.langue,
+.interet,
+.demain_objet {
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.competence-card:hover,
+.experience-card:hover,
+.formation-card:hover,
+.langue:hover,
+.interet:hover,
+.demain_objet:hover {
+    opacity: 0.7;
+}
+
+.logo img {
+    transition: opacity 0.25s ease;
+}
+
+.logo:hover img {
+    opacity: 0.4;
+}
+
+/* ----- RESPONSIVE ----- */
+
+@media (max-width: 900px) {
+
+.positionnement {
+    position: relative;
+    overflow: hidden;
+    background: none;
+}
+
+.positionnement::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("samourai.png") center / contain no-repeat;
+    opacity: 0.20;
+     z-index: 0;
+ }
+
+.positionnement > * {
+    position: relative;
+    z-index: 1;
+}
+
+.logo {
+display: none;
+}
+
+.navbar {
+    padding: 12px 20px;
+}
+
+.nav-links {
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-links a {
+    font-size: 14px;
+}
+
+.profil {
+    max-width: none;
+    padding: 100px 30px 40px;
+}
+
+.apropos-grid {
+    grid-template-columns: 1fr;
+}
+
+.positionnement {
+    min-height: 360px;
+    padding: 1.5rem 2rem;
+}
+
+.apropos-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+.logo {
+    order: 2;
+    min-height: 260px;
+}
+
+.logo img {
+    width: min(75%, 330px);
+    opacity: 0.20;
+}
+
+.competences,
+.experiences,
+.langues,
+.centres-interet {
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+.competences-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.formation-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.interet {
+    grid-template-columns: 1fr;
+    row-gap: 0.4rem;
+}
+
+.demain {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.demain_colonne {
+    grid-template-columns: 1fr;
+}
+
+.demain_objet + .demain_objet {
+    border-left: 0;
+    border-top: 1px solid #222;
+    }
+}
+
+@media (max-width: 600px) {
+.navbar {
+    padding: 10px 14px;
+}
+
+.nav-links {
+    gap: 10px 16px;
+}
+
+.nav-links a {
+    font-size: 12px;
+}
+
+.profil {
+    padding: 90px 20px 32px;
+}
+
+.titre_CV h1 {
+    font-size: 2.3rem;
+    letter-spacing: 0.04em;
+}
+
+.role_cv {
+    font-size: 0.95rem;
+}
+
+.descriptif_role {
+        font-size: 12px;
+        line-height: 1.6;
+}
+
+.positionnement {
+    padding: 1rem 1.25rem;
+}
+
+.description,.objectif {
+        font-size: 0.92rem;
+        line-height: 1.6;
+}
+
+.signature {
+        padding: 18px 20px;
+        font-size: 0.95rem;
+}
+
+.positionnement {
+    min-height: 380px;
+    padding: 1rem 1.25rem;
+}
+
+.competences-grid,
+.formation-container,
+.langues-grid {
+        grid-template-columns: 1fr;
+    }
+
+.competences,
+.experiences,
+.langues,
+.centres-interet {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+.competence-card,
+.experience-card,
+.formation-card {
+        padding: 20px;
+    }
+
+.formation {
+        padding: 56px 20px;
+    }
+
+.formation h1 {
+        font-size: 2rem;
+    }
+
+.demain {
+        padding: 64px 20px;
+    }
+
+.demain_titre h2 {
+        font-size: 2.2rem;
+    }
+
+.footer {
+        flex-direction: column;
+        gap: 30px;
+        padding: 40px 20px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+ html {
+    scroll-behavior: auto;
+    }
+
+.competence-card,
+.experience-card,
+.formation-card,
+.langue,
+.interet,
+.demain_objet,
+.logo img {
+        transition: none;
+    }
+}
